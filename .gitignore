@@ -1,0 +1,6 @@
+./dist
+./env
+
+# Ignore google files
+./credentials.json
+./token.json
