@@ -132,7 +132,7 @@ def addBdays(creds, file_name, can_replace):
                     event["end"] = {
                         "date" : end_date.strftime("%Y-%m-%d")
                     }
-                    # event["eventType"] = "birthday"
+                    # event["eventType"] = "birthday" 
                     persons = people.split(COMMA_SEP)
                     
                     for person in persons:
@@ -223,7 +223,7 @@ def main():
     exclusive_group.add_argument("-r", "-replace", action="store_true", help="Toggle ability to replace existing calendar birthdays")
     exclusive_group.add_argument("-d", "-delete", action="store_true", help="delete existing birthdays in calendar")
 
-    parser.add_argument("-file", type=str, help="text file containing names and respective birthdays") # TODO: enforce required for everything except -d and --l
+    parser.add_argument("-f", "-file", type=str, help="text file containing names and respective birthdays") # TODO: enforce required for everything except -d and --l
 
     # Set default function as run()
     parser.set_defaults(func=run)
