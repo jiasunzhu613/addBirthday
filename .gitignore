@@ -8,3 +8,5 @@
 # Ignore google files
 /credentials.json
 /token.json
+
+/__pycache__
