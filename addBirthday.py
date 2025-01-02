@@ -20,6 +20,10 @@ COMMA_SEP = ","
 
 
 def run(args):
+    if args.l:
+        logout()
+        return
+
     # Set up Google API
     creds = None
     # Check if creds already exists 
@@ -39,9 +43,7 @@ def run(args):
         with open("token.json", "w") as token: 
             token.write(creds.to_json())
 
-    if args.l:
-        logout()
-    elif args.d:
+    if args.d:
         # If file is given by user, only delete birthdays of people in file 
         if args.file:
             deleteBdaysInFile(creds)
@@ -231,7 +233,7 @@ def main():
 
     # Run default function with args as arguments
     args.func(args)
-    print(args)
+    # print(args)
 
 
 def logout():
