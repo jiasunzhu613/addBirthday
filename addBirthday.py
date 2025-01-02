@@ -20,11 +20,6 @@ COMMA_SEP = ","
 
 
 def run(args):
-    """
-    TODO: 
-    - if args.d == True: check if there is a file and run respective delete functions
-    - if args.r == True: allow replace operation for existing calendar bdays with same name
-    """
     # Set up Google API
     creds = None
     # Check if creds already exists 
@@ -86,11 +81,6 @@ def get_date(date):
 
 
 def addBdays(creds, file_name, can_replace):
-    """
-    TODO:
-    - get list of existing birthdays 
-    - 
-    """
     try: 
         # Build calendar object
         service = build("calendar", "v3", credentials=creds)
