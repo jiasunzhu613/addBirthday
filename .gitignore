@@ -1,5 +1,9 @@
-/dist
+# Python virtual env
 /env
+
+# IDE
+/dist
+/.idea
 
 # Ignore google files
 /credentials.json
