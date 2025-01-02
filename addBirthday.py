@@ -75,7 +75,6 @@ def get_date(date):
     # Try %Y/%m/$d format
     try: 
         when = datetime.datetime.strptime(date, "%Y/$m/%d")
-        when = when.replace(year=datetime.datetime.now().year)
         return when
     except ValueError as error:
         pass
