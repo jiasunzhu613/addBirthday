@@ -83,8 +83,8 @@ Currently only 3 birth date formats are supported, all others will be considered
     - e.g. Jan 1, Apr 19, Feb 25, may 1, jun 19, dec 25
 2. `%B %d` format (month with day)
     - e.g. January 1, April 19, February 25, may 1, june 19, december 25
-3. `%Y/%m/$d` format (year/month/day)
-    - e.g. 2000/05/15, 2024/12/20, 2025/01/01
+3. `%m/$d` format (month/day)
+    - e.g. 05/15, 12/20, 01/01, 5/15, 1/1
 
 
 

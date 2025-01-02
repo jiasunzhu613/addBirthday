@@ -74,7 +74,8 @@ def get_date(date):
 
     # Try %Y/%m/$d format
     try: 
-        when = datetime.datetime.strptime(date, "%Y/$m/%d")
+        when = datetime.datetime.strptime(date, "%m/%d")
+        when = when.replace(year=datetime.datetime.now().year)
         return when
     except ValueError as error:
         pass
@@ -113,6 +114,9 @@ def addBdays(creds, file_name, can_replace):
                 # Maps one or more people's name to their birthday
                 bday_mapping = [line.split(COLON_SEP) for line in f.readlines()]
                 for ind, bday in enumerate(bday_mapping):
+                    if not bday:
+                        print(f"Line empty. Skipped")
+                        continue
                     people, day = bday
                     date = get_date(day.strip())
                     if not date:
