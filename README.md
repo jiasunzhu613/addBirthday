@@ -63,8 +63,11 @@ The name(s) and birth date must be separated by a colon and a space.
 There may be more than one comma-separated name for the name field (however note that it is best to not include a space after the comma).
 
 Example of valid lines of input: 
+
 `Opi: Jan 10`
+
 `John Doe,Jane Doe: March 19`
+
 `Upi: Dec 19`
 
 #### Delete Birthdays
